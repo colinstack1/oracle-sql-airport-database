@@ -47,6 +47,12 @@ in mind and is suitable for academic and professional demonstration purposes.
 
 ## Example Query
 ```sql
-SELECT e.employee_id, e.first_name, e.last_name, a.airport_name
-FROM employee e
-JOIN airport a ON e.airport_id = a.airport_id;
+SELECT fi.flight_id,
+       fi.flight_date,
+       f.flight_gate,
+       dep.city AS departure_city,
+       arr.city AS arrival_city
+FROM flight_info fi
+JOIN flight f ON f.flight_id = fi.flight_id
+JOIN airport dep ON dep.airport_code = fi.depart_airport
+JOIN airport arr ON arr.airport_code = fi.arrive_airport;
