@@ -33,7 +33,6 @@ This project was designed to showcase:
 - **data/** – sample data insertion script
 - **queries/** – reporting and portfolio queries
 - **output/** – sample query output examples
-- **diagrams/** – ER diagram placeholder for future upload
 
 ## Key Features
 - Safe object drops for rerunnable execution
